@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Mi tabla bonita.
+  div.row
+    form(action="#", method="post" class="col-sm" name="claseForm")
+      label(for="name") Name
+      input(type="text" name="name")  
+      label(for="uvs") uvs
+      input(type="text" name="uvs")
+      label(for="descripcion") descripcion
+      input(type="text", name="descripcion")
+      input(type="submit" name="submit" value="agregar" class="btn btn-success")
+
+    br
+
+    table#claseTabla.col-sm
+      thead
+        th name
+        th uvs
+        th descripcion
+        th Opciones  
+      tbody#claseTablaBody
+
+  script(src="./javascripts/main.js")
